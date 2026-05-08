@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>kalro farm Livestock Marketplace</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+<!-- OPTIONAL: ADD THIS FLOATING WHATSAPP BUTTON RIGHT BEFORE </body> -->
+
+<a
+  href="https://wa.me/254756964457"
+  target="_blank"
+  class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-2xl z-50">
+
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    fill="currentColor"
+    viewBox="0 0 16 16">
+
+    <path d="M13.601 2.326A7.854 7.854 0 0 0 8.002 0C3.58 0 0 3.58 0 8a7.94 7.94 0 0 0 1.146 4.106L0 16l4.025-1.122A7.944 7.944 0 0 0 8.002 16C12.42 16 16 12.42 16 8a7.94 7.94 0 0 0-2.399-5.674zM8.002 14.5a6.48 6.48 0 0 1-3.302-.902l-.236-.14-2.388.665.637-2.328-.154-.239A6.48 6.48 0 0 1 1.5 8c0-3.59 2.912-6.5 6.502-6.5a6.46 6.46 0 0 1 4.6 1.903A6.46 6.46 0 0 1 14.5 8c0 3.59-2.91 6.5-6.498 6.5zm3.63-4.867c-.198-.1-1.172-.578-1.354-.644-.181-.066-.313-.1-.445.1-.132.198-.511.644-.627.776-.115.132-.231.148-.429.05-.198-.1-.836-.308-1.592-.981-.588-.524-.985-1.172-1.1-1.37-.116-.198-.012-.305.087-.404.09-.09.198-.231.297-.347.099-.116.132-.198.198-.33.066-.132.033-.248-.017-.347-.05-.099-.445-1.074-.61-1.47-.161-.387-.325-.334-.445-.34l-.38-.007c-.132 0-.347.05-.528.248-.181.198-.693.677-.693 1.652 0 .974.71 1.916.809 2.048.099.132 1.397 2.134 3.386 2.992.473.204.842.326 1.13.417.475.151.907.13 1.249.079.381-.057 1.172-.479 1.337-.942.165-.462.165-.859.116-.942-.05-.083-.182-.132-.38-.231z"/>
+  </svg>
+
+</a>
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f7f6f2;
+      color: #1f2937;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero-section {
+      background-image: url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: white;
+      font-weight: bold;
+      border: 2px solid #166534;
+      transition: 0.3s;
+    }
+
+    .filter-btn:hover {
+      background: #166534;
+      color: white;
+    }
+
+    .filter-btn.active {
+      background: #166534;
+      color: white;
+    }
+
+    .animal-card {
+      transition: 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-image {
+      transition: 0.3s;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="bg-green-900 text-white shadow-lg sticky top-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <h1 class="text-3xl font-bold">
+        kalro farm
+      </h1>
+
+      <div class="space-x-6 text-lg">
+        <a href="#home" class="hover:text-yellow-300">Home</a>
+        <a href="#livestock" class="hover:text-yellow-300">Livestock</a>
+        <a href="#about" class="hover:text-yellow-300">About</a>
+        <a href="#contact" class="hover:text-yellow-300">Contact</a>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero-section text-white">
+
+    <div class="bg-black/60 min-h-[90vh] flex items-center">
+
+      <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          Premium Livestock Marketplace
+        </h2>
+
+        <p class="text-xl md:text-2xl max-w-2xl mb-10">
+          Buy healthy cattle, goats, and sheep directly from trusted farms.
+        </p>
+
+        <a href="#livestock"
+          class="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-xl text-lg font-bold">
+          Browse Livestock
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">
+          Verified Health
+        </h3>
+        <p>
+          Every animal is checked and verified by professional veterinarians.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">
+          Trusted Farms
+        </h3>
+        <p>
+          We work with reliable and experienced livestock breeders.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-bold mb-4 text-green-800">
+          Fast Delivery
+        </h3>
+        <p>
+          Nationwide livestock transport and logistics available.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LIVESTOCK -->
+  <section id="livestock" class="py-20 bg-[#eeede7]">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-12">
+
+        <h2 class="text-5xl font-bold text-green-900 mb-4">
+          Available Livestock
+        </h2>
+
+        <p class="text-lg text-gray-600">
+          Browse our premium livestock collection
+        </p>
+
+      </div>
+
+      <!-- FILTER BUTTONS -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+
+        <button class="filter-btn active" data-filter="all">
+          All
+        </button>
+
+        <button class="filter-btn" data-filter="cattle">
+          Cattle
+        </button>
+
+        <button class="filter-btn" data-filter="goat">
+          Goats
+        </button>
+
+        <button class="filter-btn" data-filter="sheep">
+          Sheep
+        </button>
+
+      </div>
+
+      <!-- GRID -->
+      <div id="livestockGrid"
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20">
+
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+      <img
+        src="logo.jfif"
+        class="rounded-2xl shadow-xl w-full h-[450px] object-cover">
+
+      <div>
+
+        <h2 class="text-5xl font-bold text-green-900 mb-6">
+          About kalro farm
+        </h2>
+
+        <p class="text-lg leading-relaxed mb-6">
+          kalro farm connects livestock buyers with trusted breeders
+          offering healthy and premium-quality farm animals.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+          Our mission is to simplify livestock trading while maintaining
+          quality, transparency, and reliability.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-[#eeede7]">
+
+    <div class="max-w-4xl mx-auto px-6">
+
+      <div class="text-center mb-10">
+
+        <h2 class="text-5xl font-bold text-green-900 mb-4">
+          Contact Us
+        </h2>
+
+        <p class="text-lg text-gray-600">
+          Send us your livestock inquiries
+        </p>
+
+      </div>
+
+      <form
+        class="bg-white p-10 rounded-2xl shadow-xl space-y-6">
+
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full border border-gray-300 p-4 rounded-xl">
+
+        <input
+          type="email"
+          placeholder="Email Address"
+          class="w-full border border-gray-300 p-4 rounded-xl">
+
+        <textarea
+          rows="6"
+          placeholder="Your Inquiry"
+          class="w-full border border-gray-300 p-4 rounded-xl"></textarea>
+
+        <button
+<a
+  href="https://wa.me/254756964457?text=Hello%20Kalro%20Farm%2C%20I%20am%20interested%20in%20your%20livestock%20and%20would%20like%20more%20details."
+  target="_blank"
+  class="bg-green-700 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg inline-block">
+  Send Inquiry on WhatsApp
+</a>
+</a>
+</a>
+</a>
+</a>
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-950 text-white py-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <h3 class="text-3xl font-bold mb-4">
+        kalro farm
+      </h3>
+
+      <p class="text-gray-300">
+        Premium livestock marketplace for trusted farming communities.
+      </p>
+
+      <div class="mt-6">
+        © 2026 kalro farm. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    const animals = [
+
+      {
+        id: 1,
+        type: "cattle",
+        breed: "Lactating Cows",
+        age: "Upgrade your herd with high-quality, high-yield genetics<br>✅ Lactating Cows<br>• Producing 21–44 litres/day<br.• Prices: KSh 120,000 – 200,000<br>✅ In-calf Heifers<br>• Expected yield: 20–34 litres/day<br>• Prices: KSh 60,000 – 90,000<br>✅ Calves (3–15 months)<br>Quality guaranteed.",
+        price: " KSh 15,000 – 50,000",
+        images: [
+          "white1.jfif",
+          "white2.jfif",
+          "white3.jfif",
+          "white4.jfif"
+        ]
+      },
+
+      {
+        id: 2,
+        type: "sheep",
+        breed: "Pure South Africa black head dorpers",
+        age: "✓Lambs 5 month's 5500<br>✓Ready to serve rams @10k<br>✓Serving rams @11k -30k<br>✓Ewes @13k-20k.<br>✓Ewes and kids@ksh20k-40k<br>✓Twin families @10k-25k<br>We offer delivery country wide",
+        price: "5500-25,000ksh",
+        images: [
+          "blackhead1.jfif",
+          "blackhead2.jfif",
+          "blackhead3.jfif",
+          "blackhead4.jfif"
+        ]
+      },
+
+      {
+        id: 3,
+        type: "hay",
+        breed: "HAY AND ANIMALS FEED ",
+        weight: "📌LUCERN<br>Lucerne @ ksh 400/- per bale.<br>(Each bale weight 18 kgs)<br>Lucerne seeds @ ksh 1250 per kg.<br>📌BOMA RHODES<br>Boma Rhodes @ ksh 200 per bale.<br>(Each bale weight 18kgs)<br>Boma rhodes seeds @ ksh 450 per kg.<br>📌BARLEY<br>Barley @ ksh 130 per piece.<br>(Each bale weight 15 kgs).<br>📌SILAGE(CHOPPED FODDER)<br>Full corn @ ksh 12 per kg.(Each bale weight 100kgs).<br>Non full-corn @ ksh 8 per kg.(Each bale weight 100 kgs).<br>Molasses @ ksh 900 per 20 litres bucket.",
+        images: [
+          "hay1.jfif",
+          "hay2.jfif",
+          "hay3.jfif",
+          "hay4.jfif"
+        ]
+      },
+
+      {
+        id: 4,
+        type: "cattle",
+        breed: "Jersey  cows",
+        age: "I prefer  Jersey  cows any day because  Dairy Cow's Kenya.<br>1) They eat less<br>2) They produce  high quality creamy milk with butter content of 5.2%<br>3)They are Hardy  and can survive  varied climatic  zones<br>4)They  produce  milk components at low cost compared  to other breeds<br>5)They look beautiful  and attractive <br> 6)They  are highly fertile,have a shorter Calving interval  and  they have earlier  maturity<br> 7)Their milk has high value used to make cheese and butter plus high nutrition value.",
+        price: "",
+        images: [
+          "jersey1.jfif",
+          "jersey2.jfif",
+          "jersey3.jfif",
+          "jersey4.jfif"
+        ]
+      },
+
+      {
+        id: 5,
+        type: "goat",
+        breed: "FULL BLOOD BOER GOAT",
+        age: "‼  **Kids (up to 3 months old):** KSh 7,000<br>**Young Goats (3-5 months old):** KSh 15,000<br>**Sub-adults (5-10 months old):** KSh 30,000<br>Our goats are well-cared-for and ready to enhance your farm's productivity. ",
+        price: "15,000-30,000 ksh",
+        images: [
+          "bore1.jfif",
+          "bore22.jfif",
+          "bore3.jfif",
+          "bore4.jfif"
+        ]
+      },
+
+      {
+        id: 6,
+        type: "sheep",
+        breed: "Hampshire Sheep",
+        age: "4 months (lamb): KSh 26,000 – 27,000 �<br>Beyondforest +1<br>6 months: KSh 31,000 – 32,000 �<br>Beyondforest +1<br>8 months: KSh 38,000 – 39,000 �<br>Beyondforest +1<br>10 months: KSh 42,000+ �<br>Beyondforest +1<br>12 months (mature): KSh 45,000 – 48,000 Beyondforest +1",
+        price: "26,000-48,000ksh",
+        images: [
+          "hamp1.jfif",
+          "hamp2.jfif",
+          "hamp3.jfif",
+          "hamp4.jfif"
+        ]
+      },
+
+      {
+        id: 7,
+        type: "cattle",
+        breed: "BORAN QUALITY , SAHIWAL QUALITY CALVES & HEIFERS FOR SALE",
+        age: " ◽Boran ◽Sahiwal◽ BrahmanLooking to start or expand your beef farming venture?We’ve got you covered with strong, healthy, and fast-growing breeds. 🚚 delivery available countrywide (upon agreement)📍",
+        weight: "790kg",
+        price: "Calves – From KSh 25,000<br>• Heifers – From KSh 60,000<br>• Matured - From Ksh 120,000",
+        images: [
+          "boran1.jfif",
+          "boran2.jfif",
+          "boran3.jfif",
+          "boran4.jfif"
+        ]
+      },
+
+      {
+        id: 8,
+        type: "goat",
+        breed: "NUNUA LEO MBUZI WA MAZIWA KWA BEI NAFUU ✅",
+        age: "HERE ARE THE GOAT FOR MILK PRODUCTION,<br>Production of 3 - 4 litres per day.<br>3-6 litres per day✅OUR PRICES IS US FOLLOWS 👇<br>1️⃣. 3 MONTHS OLD @ 3,500 <br>2️⃣. 5 MONTHS OLD @ 5,500<br>3️⃣. 7  MONTHS OLD @ 7,500<br>4️⃣. 10 MONTHS OLD @ 10K<br>5️⃣. First timer mothers @ 14k<br>6️⃣. Second -timer mothers @ 12k<br>7️⃣. Ready to deliver in 2 weeks @ 18k<br>8️⃣.Ready to deliver in 1 month @ 16k <br>9️⃣.Male @10k.",
+       
+        images: [
+          "goat1.jfif",
+          "goat2.jfif",
+          "goat3.jfif",
+          "goat4.jfif"
+        ]
+      },
+
+      {
+        id: 9,
+        type: "cattle",
+        breed: "Girolando",
+        age: ",Calves (2–3 months) → KSh 20,000 – 30,000 �<br>Young (4–8 months) → KSh 30,000 – 40,000 �<br>Growing heifers (8–15 months) → KSh 60,000 – 130,000 (depends on quality) �<br>Beyondforest<br>Mature (not pregnant) → KSh 70,000 – 100,000 �<br>In-calf (pregnant) → KSh 140,000 – 180,000+ �<br>Lactating (milk producing) → KSh 180,000 – 250,000+ (high yield cows cost more) �",
+        price: "20,000-250,000 ksh",
+        images: [
+          "grilando1.jfif",
+          "grilando2.jfif",
+          "grilando3.jfif",
+          "grilando4.jfif"
+        ]
+      }
+
+    ];
+
+    const grid = document.getElementById("livestockGrid");
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    function renderAnimals(filter = "all") {
+
+      grid.innerHTML = "";
+
+      const filteredAnimals = filter === "all"
+        ? animals
+        : animals.filter(animal => animal.type === filter);
+
+      filteredAnimals.forEach(animal => {
+
+        grid.innerHTML += `
+
+          <div class="animal-card bg-white rounded-2xl overflow-hidden shadow-xl">
+
+            <!-- MAIN IMAGE -->
+            <img
+              src="${animal.images[0]}"
+              onclick="openFullscreen('${animal.images[0]}')"
+              class="h-72 w-full object-cover cursor-pointer hover:opacity-90">
+
+            <!-- 4 IMAGE GALLERY -->
+            <div class="grid grid-cols-4 gap-2 p-3 bg-gray-100">
+
+              ${animal.images.map(image => `
+
+                <img
+                  src="${image}"
+                  onclick="openFullscreen('${image}')"
+                  class="gallery-image h-20 w-full object-cover rounded-lg cursor-pointer">
+
+              `).join("")}
+
+            </div>
+
+            <!-- CONTENT -->
+            <div class="p-6">
+
+              <span class="uppercase text-sm text-green-700 font-bold">
+                ${animal.type}
+              </span>
+
+              <h3 class="text-3xl font-bold mt-2 mb-4">
+                ${animal.breed}
+              </h3>
+
+              <div class="space-y-2 text-gray-600">
+
+                <p>
+                  <strong>Age:</strong> ${animal.age}
+                </p>
+
+                <p>
+                  <strong>Weight:</strong> ${animal.weight}
+                </p>
+
+              </div>
+
+              <div class="mt-6 flex justify-between items-center">
+
+                <span class="text-3xl font-bold text-green-800">
+                  ${animal.price}
+                </span>
+
+                <button
+                  
+  href="https://wa.me/254756964457?text=Hello%20kalro farm,%20I%20am%20interested%20in%20this%20livestock."
+  target="_blank"
+  class="bg-green-700 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-semibold inline-block">
+  Inquire
+</a>
+                  
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        `;
+      });
+
+    }
+
+    buttons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        buttons.forEach(btn => btn.classList.remove("active"));
+
+        button.classList.add("active");
+
+        renderAnimals(button.dataset.filter);
+
+      });
+
+    });
+
+    function openFullscreen(imageSrc) {
+
+      const viewer = document.createElement("div");
+
+      viewer.className =
+        "fixed inset-0 bg-black/95 flex items-center justify-center z-50";
+
+      viewer.innerHTML = `
+
+        <div class="relative w-full h-full flex items-center justify-center">
+
+          <button
+            onclick="this.parentElement.parentElement.remove()"
+            class="absolute top-6 right-8 text-white text-6xl font-bold hover:text-red-400">
+            &times;
+          </button>
+
+          <img
+            src="${imageSrc}"
+            class="max-h-[90%] max-w-[90%] rounded-2xl shadow-2xl">
+
+        </div>
+
+      `;
+
+      document.body.appendChild(viewer);
+
+    }
+
+    renderAnimals();
+
+  </script>
+
+</body>
+</html>
